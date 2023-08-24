@@ -1,0 +1,33 @@
+:root {
+  --cor-fundo: #0f0f0e;
+}
+
+body {
+ background-color: var(--cor-fundo);
+
+}
+
+  .container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btnResposta1 {
+  color: var(--cor-fundo);
+}
+
+  #mensagem {
+  width: 100%;
+  height: 15%;
+}
+
+
+  .main__conteudo__paragrafo {
+    color: white;
+  }
+
+  .main__conteudo__perguntas {
+      color: white;
+  }
+
+  
