@@ -1,6 +1,9 @@
 const botao = document.getElementById('btnResposta');
 const mensagem = document.getElementById('mensagem');
 const pergunta = document.getElementById("pergunta");
+const paragrafo = document.getElementById('paragrafo');
+const div = document.getElementById('divPrincipal');
+const botao2 = document.createElement ('button');
 
 const resposta = {};
 
@@ -25,5 +28,17 @@ botao.addEventListener ('click', () => {
 
    } else {
     console.log('Resposta:', resposta);
+
+    mensagem.style.display = 'none';
+
+    paragrafo.textContent = `Olá ${resposta.nome}, você tem ${resposta.idade} anos e já está aprendendo ${resposta.linguagem}!`
+    pergunta.textContent = `Você gosta de estudar ${resposta.linguagem}?`
+
+      div.appendChild(botao2);
+      botao2.classList.add ('btnResposta2');
+      botao2.textContent = 'Sim';
+      botao2.style.display = 'block';
+
+      botao.textContent = ('Não');
    }
 })
