@@ -4,6 +4,7 @@ const pergunta = document.getElementById("pergunta");
 const paragrafo = document.getElementById('paragrafo');
 const div = document.getElementById('divPrincipal');
 const botao2 = document.createElement ('button');
+let primeiroEvento = false;
 
 const resposta = {};
 
@@ -40,5 +41,28 @@ botao.addEventListener ('click', () => {
       botao2.style.display = 'block';
 
       botao.textContent = ('Não');
+
+      primeiroEvento = true;
+
+      if (primeiroEvento) {
+         botao2.addEventListener("click", () => {
+            paragrafo.textContent = "Muito bom! Continue estudando e você terá muito sucesso."
+            pergunta.style.display = "none";
+            botao2.style.display = "none";
+            botao.style.display = "none";
+         })
+         
+            
+         botao.addEventListener("click", () => {
+            paragrafo.textContent = "Ahh que pena... Já tentou aprender outras linguagens?"
+            pergunta.style.display = "none";  
+            botao.style.display = "none";
+            botao2.style.display = "none";
+         })
+      }
+      
    }
 })
+
+
+
